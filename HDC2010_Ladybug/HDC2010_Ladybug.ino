@@ -88,7 +88,8 @@ void setup() {
 
   HDC2010.reset(HDC2010_0_ADDRESS);
 
-  // Configure HCD2010 for auto measurement mode
+  // Configure HCD2010 for auto measurement mode if freq not ForceMode
+  // else measurement performed only once each time init is called
   HDC2010.init(HDC2010_0_ADDRESS, hres, tres, freq);
 
   // Set the time
